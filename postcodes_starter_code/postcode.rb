@@ -110,125 +110,136 @@ class Postcodesio
     arr
   end
 
-    def twoquality
-      arr=[]
-      @twoPost['result'].each do |quality|
-        arr<< quality ['result']['quality']
-      end
-      arr
+  def twoquality
+    arr=[]
+    @twoPost['result'].each do |quality|
+      arr<< quality ['result']['quality']
     end
+    arr
+  end
 
-    def twosurvey
-      arr=[]
-      @twoPost['result'].each do |survey|
-        arr<< survey ['result']['quality']
-      end
-      arr
+  def twosurvey
+    arr=[]
+    @twoPost['result'].each do |survey|
+      arr<< survey ['result']['quality']
     end
+    arr
+  end
 
-    def twoNHS
-      arr=[]
-      @twoPost['result'].each do |nhs|
-        arr<< nhs['result']['nhs_ha']
-      end
-      arr
+  def twoNHS
+    arr=[]
+    @twoPost['result'].each do |nhs|
+      arr<< nhs['result']['nhs_ha']
     end
+    arr
+  end
 
-    def twolongitude
-      arr=[]
-      @twoPost['result'].each do |longitude|
-        arr<< longitude ['result']['longitude']
-      end
-      arr
+  def twolongitude
+    arr=[]
+    @twoPost['result'].each do |longitude|
+      arr<< longitude ['result']['longitude']
     end
+    arr
+  end
 
-    def twolatitude
-      arr=[]
-      @twoPost['result'].each do |latitude|
-        arr<< latitude ['result']['latitude']
-      end
-      arr
+  def twolatitude
+    arr=[]
+    @twoPost['result'].each do |latitude|
+      arr<< latitude ['result']['latitude']
     end
+    arr
+  end
 
-    def two_parliamentary
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['parliamentary_constituency']
-      end
-      arr
+  def two_parliamentary
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['parliamentary_constituency']
     end
+    arr
+  end
 
-    def two_european_electoral
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['european_electoral_region']
-      end
-      arr
+  def two_european_electoral
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['european_electoral_region']
     end
+    arr
+  end
 
-    def two_primary_care
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['primary_care_trust']
-      end
-      arr
+  def two_primary_care
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['primary_care_trust']
     end
+    arr
+  end
 
-    def two_primary_care
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['primary_care_trust']
-      end
-      arr
+  def two_primary_care
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['primary_care_trust']
     end
+    arr
+  end
 
-    def two_region_string
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['region']
-      end
-      arr
+  def two_region_string
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['region']
     end
+    arr
+  end
 
-    def two_parish
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['parish']
-      end
-      arr
+  def two_parish
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['parish']
     end
+    arr
+  end
 
-    def two_lsoa
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['lsoa']
-      end
-      arr
+  def two_lsoa
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['lsoa']
     end
+    arr
+  end
 
-    def two_msoa
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['msoa']
-      end
-      arr
+  def two_msoa
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['msoa']
     end
+    arr
+  end
 
-    def two_admin_district
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['admin_district']
-      end
-      arr
+  def two_admin_district
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['admin_district']
     end
+    arr
+  end
 
-    def two_incode
-      arr=[]
-      @twoPost['result'].each do |k|
-        arr<< k ['result']['incode'].length
-      end
-      arr
+  def two_incode
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['incode'].length
     end
+    arr
+  end
+
+  def two_country
+    arr=[]
+    @twoPost['result'].each do |k|
+      arr<< k ['result']['country']
+    end
+    arr
+  end
+
+
+
 end
 show = Postcodesio.new
 
@@ -237,8 +248,3 @@ show = Postcodesio.new
 
 
 p show.get_multiple_postcodes(["DA81BY","DA81BY"])
-# p show.get_single_postcode("da81by")
-
-
-
- # p show.status
